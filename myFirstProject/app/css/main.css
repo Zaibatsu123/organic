@@ -1,0 +1,29 @@
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	position: relative;
+	cursor: pointer;
+}
+
+li:before {
+	content: '';
+	position: absolute;
+	top: 30%;
+	left: -10px;
+	width: 0;
+	height: 0;
+	border-bottom: 5px solid red;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	-webkit-transition: 200ms;
+	-o-transition: 200ms;
+	transition: 200ms;
+}
+
+li.active:before {
+	transform: rotate(180deg);
+}
